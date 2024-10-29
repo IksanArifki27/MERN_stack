@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="flex h-12 bg-white items-center justify-between w-full fixed shadow-md">
       <div className="brand ml-4">
         <h1 className="text-3xl md:text-2xl font-bold">
-          <Link to="/">Brand</Link>
+          <Link to="/">SmartFind</Link>
         </h1>
       </div>
       <div className="hidden items-center gap-4  md:flex list-none mr-3">
@@ -45,39 +45,53 @@ const Navbar = () => {
 
       <div className="flex md:hidden mr-5 cursor-pointer" onClick={handleNav}>
         {!navbar ? (
-          <IoDesktop size={22} className="text-gray-800" />
+          <img src="./image/hamburger.png" width={30} />
         ) : (
-          <IoClose size={22} className="text-gray-800" />
+          <IoClose size={30} className="text-gray-800" />
         )}
       </div>
       <div
         className={
           !navbar
             ? "hidden"
-            : "absolute w-1/2  py-4 px-8 top-0  ease-in-out duration-1500 h-full"
+            : "absolute w-1/2  top-0  ease-in-out duration-1500  "
         }
       >
-        <div className="brand ml-4">
-          <h1 className="text-2xl font-bold">Brand</h1>
-        </div>
-        <ul>
-          <li className="border-b-2  border-b-gray-600 py-3 font-semibold cursor-pointer ">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="border-b-2  border-b-gray-600 py-3 font-semibold">
-            <Link to="/about">About</Link>
-          </li>
-          <li className="border-b-2  border-b-gray-600 py-3 font-semibold">
-            <Link to="/product">Product</Link>
-          </li>
-        </ul>
-        <div className=" mt-3   ">
-          <button className="bg-purple-400 py-2 px-2 font-semibold text-white rounded-md  my-3 ">
-            sing up
-          </button>
-          <button className="bg-purple-500 py-2 px-2 font-semibold text-white rounded-md">
-            sign in
-          </button>
+        <div className="bg-blue-600 min-h-screen px-8">
+          <div className="brand ml-4">
+            <h1 className="text-2xl font-bold text-gray-200 py-5">SmartFind</h1>
+          </div>
+          <ul className="gap-4 my-4">
+            <li className="font-semibold text-white cursor-pointer   ">
+              <a href="#home" onClick={handleNav}>
+                {" "}
+                Home
+              </a>
+              {/* <Link to="/">Home</Link> */}
+            </li>
+            <li className="font-semibold text-white cursor-pointer">
+              <a href="#about" onClick={handleNav}>
+                {" "}
+                About
+              </a>
+              {/* <Link to="/about">About</Link> */}
+            </li>
+            <li className="font-semibold text-white cursor-pointer">
+              {/* <Link to="/product">Product</Link> */}
+              <a href="#product" onClick={handleNav}>
+                {" "}
+                Product
+              </a>
+            </li>
+          </ul>
+          <div className="  mt-3 gap-2">
+            <button className="bg-blue-400 p-2 font-semibold text-white rounded-md  my-3 ">
+              sing up
+            </button>
+            <button className="bg-blue-400 p-2 font-semibold text-white rounded-md  my-3 ">
+              sing In
+            </button>
+          </div>
         </div>
       </div>
     </div>

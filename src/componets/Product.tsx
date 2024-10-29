@@ -27,7 +27,7 @@ const Product = () => {
   }, []);
   return (
     <div>
-      <div className="my-6 md:flex mx-10 gap-5 md:flex-wrap justify-between  ">
+      <div className="my-6 flex flex-wrap gap-3  md:flex mx-10 md:gap-5 md:flex-wrap justify-between  ">
         {datas.map((item: Product, index) => (
           <div
             key={index}
